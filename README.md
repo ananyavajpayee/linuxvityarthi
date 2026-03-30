@@ -154,6 +154,3 @@ The transparency, flexibility, and community-driven nature of open-source tools 
 - **Instructor & Peers** – For their guidance and feedback throughout the course.
 
 ---
-```
-
-This README is comprehensive, professional, and ready to be added directly to your GitHub repository. Let me know if you'd like to customize any section further!
