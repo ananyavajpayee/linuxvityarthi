@@ -1,47 +1,23 @@
 #!/bin/bash
-
 # Script 2: FOSS Package Inspector
-# Author: M. NEHITH
-# Course: Open Source Software
 
-PACKAGE="python3"
+PACKAGE="python3" # e.g. httpd, mysql, vlc, firefox
 
-echo "Checking package: $PACKAGE"
-echo "--------------------------------"
-
-# Check if Python is installed
-if dpkg -l | grep -q $PACKAGE; then
-    echo "$PACKAGE is installed."
-
-    # Show Python version
-    python3 --version
-
+# Check if package is installed
+# Changed rpm to dpkg -l because WSL uses Ubuntu, as allowed by your PDF
+if dpkg -l $PACKAGE &>/dev/null; then
+ echo "$PACKAGE is installed."
+ dpkg -s $PACKAGE | grep -E 'Version|License|Summary|Description'
 else
-    echo "$PACKAGE is NOT installed."
+ echo "$PACKAGE is NOT installed."
 fi
 
-echo ""
-
-# Case statement describing the package
+# Add a case statement that prints a one-line
+# philosophy note about the package based on its name
 case $PACKAGE in
-python3)
-echo "Python: an open-source programming language widely used in software development, data science, and automation."
-;;
-
-git)
-echo "Git: distributed version control system used by developers worldwide."
-;;
-
-apache2)
-echo "Apache: powerful open-source web server."
-;;
-
-mysql)
-echo "MySQL: open-source relational database system."
-;;
-
-*)
-echo "Unknown open-source package."
-;;
-
+ httpd) echo "Apache: the web server that built the open internet" ;;
+ mysql) echo "MySQL: open source at the heart of millions of apps" ;;
+ python3) echo "Python: The language that democratized AI" ;;
+ vlc) echo "VLC: Plays anything, built by students" ;;
+ firefox) echo "Firefox: A nonprofit fighting for an open web" ;;
 esac
