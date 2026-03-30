@@ -1,95 +1,159 @@
-# linuxvityarthi
+# Open Source Software Audit: Python on Linux
 
-Open Source Software Audit Project Project Overview
+**Author:** Ananya Vajpayee  
+**Registration Number:** 24BCE10584  
+**Course:** Open Source Software, VIT Bhopal
 
-This repository contains my Open Source Software audit project completed as part of the Open Source Software course at VIT Bhopal. The objective of this project is to explore how open-source software works within a Linux environment and to understand the philosophy, ecosystem, and technical structure behind widely used FOSS tools.
+---
 
-For this audit, I selected Python as the primary open-source software. Python is one of the most widely used programming languages in the world and is known for its readability, simplicity, and strong open-source community support.
+## 📌 Project Overview
 
-Through this project, I examined Python's presence in a Linux system and implemented a set of shell scripts to analyze system information, software installation, file permissions, log files, and open-source philosophy. Selected Open Source Software
+This repository contains the **Open Source Software Audit** project completed as part of the Open Source Software course at VIT Bhopal. The project explores how open-source software operates within a Linux environment, with a focus on understanding the philosophy, ecosystem, and technical structure behind widely used Free and Open Source Software (FOSS) tools.
 
-Software Name: Python Category: Programming Language License: Python Software Foundation License (Open Source)
+For this audit, **Python** was selected as the primary open-source software due to its widespread adoption, readability, and strong community-driven development model. Through a series of shell scripts, this project examines Python’s presence in a Linux system and performs system-level auditing tasks such as inspecting system information, installed packages, file permissions, and log files.
 
-Python was created by Guido van Rossum and first released in 1991. It was designed to emphasize code readability and developer productivity. Over the years, Python has become an essential tool in fields such as:
+---
 
-1)Software development 2)Data science 3)Artificial intelligence 4)Web development 5)Automation and scripting
+## 🧾 Selected Open Source Software
 
-Because Python is open-source, developers around the world can contribute to its development and improve its ecosystem.
+| Attribute          | Details                                       |
+|--------------------|-----------------------------------------------|
+| **Software Name**  | Python                                        |
+| **Category**       | Programming Language                          |
+| **License**        | Python Software Foundation License (Open Source) |
 
-Project Objectives
+Python was created by **Guido van Rossum** and first released in 1991. It emphasizes code readability and developer productivity. Today, Python is widely used in:
 
-1)The main objectives of this project were: 2)To understand the philosophy behind open-source software. 3)To analyze how an open-source tool exists and operates inside a Linux environment. 4)To gain hands-on experience with Linux shell scripting. 5)To inspect system information, packages, logs, and directories using automation scripts. 6)To document observations and learn how open-source ecosystems function
+- Software Development  
+- Data Science and Machine Learning  
+- Artificial Intelligence  
+- Web Development  
+- Automation and Scripting  
 
-Repository Structure
+As an open-source project, Python benefits from contributions by developers worldwide, fostering continuous improvement and innovation.
 
-This repository contains several shell scripts that perform different auditing and analysis tasks. 1)README.md 2)script1_system_identity.sh 3)script2_package_inspector.sh 4)script3_disk_auditor.sh 5)script4_log_analyzer.sh 6)script5_manifesto_generator.sh
+---
 
-Script Descriptions Script 1 – System Identity Report
+## 🎯 Project Objectives
 
-This script gathers basic information about the Linux system and displays it in a structured format.
+1. Understand the philosophy and principles behind open-source software.
+2. Analyze the installation and operation of open-source tools within a Linux environment.
+3. Gain hands-on experience with Linux shell scripting and automation.
+4. Inspect system information, packages, logs, and directories using custom scripts.
+5. Document observations and reflect on the collaborative nature of open-source ecosystems.
 
-It collects details such as:
+---
 
-1)Current user 2)Linux distribution 3)Kernel version 4)System uptime 5)Current date and time
+## 📁 Repository Structure
 
-This script demonstrates how simple shell commands can be combined to generate a quick system overview.
+| File Name                 | Description                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| `README.md`               | Project documentation (this file)                                           |
+| `script1_system_identity.sh` | Gathers basic system information (user, OS, kernel, uptime, date/time).  |
+| `script2_package_inspector.sh` | Checks if Python is installed, displays version, and provides a description. |
+| `script3_disk_auditor.sh` | Reports permissions, owner, group, and size of key directories.           |
+| `script4_log_analyzer.sh` | Scans log files for keywords like "error" and displays recent matches.      |
+| `script5_manifesto_generator.sh` | Interactive script that generates a personalized Open Source Manifesto. |
 
-Script 2 – FOSS Package Inspector
+---
 
-The second script checks whether Python is installed on the system.
+## 📜 Script Descriptions
 
-It performs tasks such as:
+### Script 1 – System Identity Report
+Collects and displays basic system information in a structured format:
+- Current user
+- Linux distribution
+- Kernel version
+- System uptime
+- Current date and time
 
-1)Detecting the Python installation 2)Displaying the installed version 3)Printing a short description of Python
+### Script 2 – FOSS Package Inspector
+Confirms Python installation and displays:
+- Installation status
+- Installed version
+- Brief description of Python
 
-This helps confirm the presence of the selected open-source software in the Linux environment.
+### Script 3 – Disk and Permission Auditor
+Examines key system directories (`/etc`, `/var/log`, `/home`, `/usr/bin`, `/tmp`) and reports:
+- Directory permissions
+- Owner and group
+- Directory size
 
-Script 3 – Disk and Permission Auditor
+### Script 4 – Log File Analyzer
+Analyzes system log files by:
+- Reading log files line by line
+- Counting occurrences of keywords (e.g., "error")
+- Displaying the most recent matching entries
 
-This script inspects several important Linux directories and reports information such as:
+### Script 5 – Open Source Manifesto Generator
+An interactive script that generates a personalized manifesto by asking:
+- An open-source tool used daily
+- Personal meaning of "freedom" in software
+- A community project the user would like to build
 
-1)Directory permissions 2)Owner and group 3)Directory size
+The output is saved as a text file, reflecting the user’s open-source philosophy.
 
-Directories examined include: /etc /var/log /home /usr/bin /tmp
+---
 
-Script 4 – Log File Analyzer
+## 🚀 How to Run the Scripts
 
-The log analyzer script scans Linux log files and searches for specific keywords such as "error".
+1. **Clone the repository** (if applicable):
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
 
-The script:
+2. **Make the scripts executable**:
+   ```bash
+   chmod +x *.sh
+   ```
 
-1)Reads a log file line by line 2)Counts occurrences of the keyword 3)Displays the most recent matching log entries
+3. **Run any script**:
+   ```bash
+   ./script1_system_identity.sh
+   ```
 
-This demonstrates basic log monitoring techniques used in system administration.
+All scripts are designed to run on Linux systems (tested on Ubuntu/WSL).
 
-Script 5 – Open Source Manifesto Generator
+---
 
-The final script is an interactive script that generates a small open-source philosophy statement.
+## 🛠️ Technologies Used
 
-The script asks the user three questions:
+- **Operating System:** Linux (Ubuntu / WSL)  
+- **Scripting:** Bash Shell  
+- **Audited Software:** Python  
+- **Version Control:** Git & GitHub  
 
-1)An open-source tool they use daily 2)What "freedom" means to them 3)Something they would build for the community
+---
 
-Based on the answers, the script generates a short Open Source Manifesto and saves it as a text file.
+## 📚 Key Learnings
 
-This script highlights the collaborative and philosophical aspect of open-source software.
+Through this project, I gained practical experience in:
 
-How to Run the Scripts First make the scripts executable: chmod +x *.sh
+- Understanding the Linux file system and directory structure  
+- Managing and auditing open-source software installations  
+- Automating system administration tasks using shell scripts  
+- Analyzing system logs for monitoring and debugging  
+- Appreciating the collaborative and transparent nature of open-source communities  
 
-Then run any script using: ./script_name.sh
+The project also strengthened my proficiency with **Git** and **GitHub**, essential tools for modern software development and open-source contribution.
 
-Technologies Used: 1)Linux (Ubuntu / WSL) 2)Bash Shell Scripting 3)Python (audited software) 4)Git & GitHub for version control
+---
 
-Key Learnings
+## ✅ Conclusion
 
-Working on this project helped me understand several important concepts, including:
+Open-source software like Python exemplifies the power of collaborative development, enabling innovation across industries from web development to artificial intelligence. This audit project provided valuable hands-on exposure to Linux system administration, shell scripting, and the philosophical foundations of the open-source movement.
 
-1)The structure of Linux file systems 2)How open-source software is installed and maintained 3)The importance of automation through shell scripting 4)Basic system auditing techniques 5)The collaborative nature of open-source communities
+The transparency, flexibility, and community-driven nature of open-source tools continue to shape the future of technology, and this project reinforced the importance of contributing to and understanding these ecosystems.
 
-It also improved my familiarity with GitHub and version control, which are essential tools in modern software development.
+---
 
-Conclusion
+## 📬 Acknowledgments
 
-Open-source software plays a vital role in today's technology ecosystem. Projects like Python demonstrate how collaborative development can produce powerful tools used across industries.
+- **VIT Bhopal** – For providing the platform and curriculum to explore open-source software.
+- **Python Community** – For maintaining and evolving one of the most impactful open-source projects in the world.
+- **Instructor & Peers** – For their guidance and feedback throughout the course.
 
-This audit project provided practical experience with Linux systems, scripting, and open-source principles. It also highlighted the transparency and flexibility that make open-source software so valuable.
+---
+```
+
+This README is comprehensive, professional, and ready to be added directly to your GitHub repository. Let me know if you'd like to customize any section further!
